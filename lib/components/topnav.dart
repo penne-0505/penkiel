@@ -20,22 +20,22 @@ class _TopNavState extends State<TopNav> {
         mainAxisAlignment: MainAxisAlignment.end,
         mainAxisSize: MainAxisSize.min,
         children: [
-          const Row(
+          Row(
             children: [
-              Padding(
-                padding: EdgeInsets.only(right: 8.0),
-                child: Icon(
+              Container(
+                margin: const EdgeInsets.only(right: 8),
+                child: const Icon(
                   Icons.folder,
                   color: Color(0xFF757578),
                   size: 30,
                 ),
               ),
-              Text(
+              const Text(
                 'Vault 1',
                 style: TextStyle(
                   color: Color(0xFF757578),
                   fontSize: 18,
-                  fontFamily: 'Inter Display',
+                  fontFamily: 'Inter',
                   fontWeight: FontWeight.w600,
                   letterSpacing: 0.6,
                   height: 0.8,

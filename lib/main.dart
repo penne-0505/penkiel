@@ -10,7 +10,7 @@ void main() {
 }
 
 class PenkielApp extends StatelessWidget {
-  const PenkielApp({super.key});
+  const PenkielApp({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -19,7 +19,7 @@ class PenkielApp extends StatelessWidget {
       home: const MyHomePage(title: 'Penkiel App'),
       scrollBehavior: CustomScrollBehavior(),
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: const Color(0xFFF2Bf5E), background: const Color(0xFFFDFDFD), surfaceTint: const Color(0x00ffffff)),
+        colorScheme: ColorScheme.fromSeed(seedColor: ColorDB.primary, background: ColorDB.bg),
         scrollbarTheme: ScrollbarThemeData(
           radius: const Radius.circular(10),
           thickness: MaterialStateProperty.all(4),
@@ -33,7 +33,7 @@ class PenkielApp extends StatelessWidget {
 }
 
 class MyHomePage extends StatefulWidget {
-  const MyHomePage({super.key, required this.title});
+  const MyHomePage({Key? key, required this.title}) : super(key: key);
 
   final String title;
 
@@ -48,17 +48,16 @@ class _MyHomePageState extends State<MyHomePage> {
     return Scaffold(
       appBar: const TopNav(),
       body: LayoutBuilder(
-        builder: (context, constraints) {
-          if ((600 < constraints.maxWidth) && (constraints.maxWidth < 1200)) {
+        builder: (BuildContext context, BoxConstraints constraints) {
+          if ((1280 < constraints.maxWidth) && (constraints.maxWidth <= 1980)) {
             return const Row(
               children: <Widget>[
-                // ! 実行して、ウィンドウの横幅を速く動かすと、エラーが出る。これ直す！！
                 Expanded(
                   flex: 1,
                   child: SideBar(),
                 ),
                 Expanded(
-                  flex: 5,
+                  flex: 4,
                   child: Center(
                     child: Text('Main Content'),
                   ),
@@ -70,8 +69,8 @@ class _MyHomePageState extends State<MyHomePage> {
               child: Text('Main Content'),
             );
           }
-        }
-      )
+        },
+      ),
     );
   }
 }
