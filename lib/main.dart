@@ -10,7 +10,7 @@ void main() {
 }
 
 class PenkielApp extends StatelessWidget {
-  const PenkielApp({Key? key}) : super(key: key);
+  const PenkielApp({super.key});
 
   @override
   Widget build(BuildContext context) {
