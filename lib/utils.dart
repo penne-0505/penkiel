@@ -66,4 +66,6 @@ class ColorDB {
   static const Color text = dark;
 
   static final Color vPHover = pale.withOpacity(0.3);
+
+  static const Color tp = Colors.transparent;
 }
