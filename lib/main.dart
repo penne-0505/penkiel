@@ -4,6 +4,7 @@ import 'package:penkiel/components/sidebar.dart';
 import 'package:penkiel/components/topnav.dart';
 import 'package:penkiel/utils.dart';
 
+// **Typos, magic numbers, nonsensical processing logic, no comments or documentation Xd **
 
 void main() {
   runApp(const PenkielApp());
@@ -23,9 +24,9 @@ class PenkielApp extends StatelessWidget {
         scrollbarTheme: ScrollbarThemeData(
           radius: const Radius.circular(10),
           thickness: MaterialStateProperty.all(4),
-          thumbColor: MaterialStateProperty.all(const Color(0xFFD8D8D8)),
+          thumbColor: MaterialStateProperty.all(ColorDB.pale),
         ),
-        fontFamilyFallback: const <String>['Inter', 'Inter Display'],
+        fontFamilyFallback: const <String>['Inter', 'Roboto', 'Arial', 'sans-serif'],
         useMaterial3: true,
       ),
     );
@@ -33,7 +34,10 @@ class PenkielApp extends StatelessWidget {
 }
 
 class MyHomePage extends StatefulWidget {
-  const MyHomePage({Key? key, required this.title}) : super(key: key);
+  const MyHomePage({
+    super.key,
+    required this.title
+  });
 
   final String title;
 
@@ -49,15 +53,15 @@ class _MyHomePageState extends State<MyHomePage> {
       appBar: const TopNav(),
       body: LayoutBuilder(
         builder: (BuildContext context, BoxConstraints constraints) {
-          if ((1280 < constraints.maxWidth) && (constraints.maxWidth <= 1980)) {
+          if ((640 < constraints.maxWidth)) {
             return const Row(
               children: <Widget>[
                 Expanded(
-                  flex: 1,
+                  flex: 7,
                   child: SideBar(),
                 ),
                 Expanded(
-                  flex: 4,
+                  flex: 32,
                   child: Center(
                     child: Text('Main Content'),
                   ),
