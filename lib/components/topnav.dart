@@ -21,58 +21,14 @@ class _TopNavState extends State<TopNav> {
       margin: const EdgeInsets.only(top: 24, bottom: 12, left: 24, right: 24),
       padding: const EdgeInsets.symmetric(horizontal: 12),
       decoration: BoxDecoration(
-        color: ColorDB.veryPale,
+        color: PenkielColors.grouped,
         borderRadius: BorderRadius.circular(18),
       ),
       child: const Stack(
+        fit: StackFit.expand,
         children: [
           VaultInfo(),
           TopNavMisc(),
-        ],
-      ),
-    );
-  }
-}
-
-class TopNavMisc extends StatelessWidget {
-  const TopNavMisc({
-    super.key,
-  });
-
-  @override
-  Widget build(BuildContext context) {
-    return Expanded(
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.end,
-        children: [
-          IconButton(
-            iconSize: 28,
-            icon: const Icon(Icons.notifications, color: ColorDB.soft),
-            onPressed: () {
-              print('Notifications button tapped');
-            },
-          ),
-          IconButton(
-            iconSize: 28,
-            icon: const Icon(Icons.settings, color: ColorDB.soft),
-            onPressed: () {
-              print('Settings button tapped');
-            },
-          ),
-          const VerticalDivider(
-            color: ColorDB.pale,
-            indent: 16,
-            endIndent: 16,
-            thickness: 1,
-            width: 12,
-          ),
-          IconButton(
-            iconSize: 44,
-            icon: const Icon(Icons.account_circle, color: ColorDB.soft),
-            onPressed: () {
-              print('Account button tapped');
-            },
-          ),
         ],
       ),
     );
@@ -97,11 +53,10 @@ class VaultInfo extends StatelessWidget {
           FilledButton(
             onPressed: onPressed,
             style: ButtonStyle(
-              overlayColor: MaterialStateProperty.all(ColorDB.tp),
-              backgroundColor: MaterialStateProperty.all(ColorDB.tp),
-              foregroundColor: MaterialStateProperty.all(ColorDB.tp),
-              surfaceTintColor: MaterialStateProperty.all(ColorDB.tp),
-              shadowColor: MaterialStateProperty.all(ColorDB.tp),
+              backgroundColor: MaterialStateProperty.all<Color>(PenkielColors.transparent),
+              surfaceTintColor: MaterialStateProperty.all<Color>(PenkielColors.transparent),
+              overlayColor: MaterialStateProperty.all<Color>(PenkielColors.transparent),
+              shadowColor: MaterialStateProperty.all<Color>(PenkielColors.transparent),
             ),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.center,
@@ -111,16 +66,15 @@ class VaultInfo extends StatelessWidget {
                   margin: const EdgeInsets.only(right: 8),
                   child: const Icon(
                     Icons.folder,
-                    color: ColorDB.soft,
+                    color: PenkielColors.mask,
                     size: 30,
                   ),
                 ),
                 const Text(
                   'Vault 1',
                   style: TextStyle(
-                    color: ColorDB.soft,
                     fontSize: 18,
-                    fontFamily: 'Inter',
+                    color: PenkielColors.text,
                     fontWeight: FontWeight.w600,
                     letterSpacing: 0.6,
                     height: 0.8,
@@ -130,12 +84,60 @@ class VaultInfo extends StatelessWidget {
                   margin: const EdgeInsets.only(left: 2),
                   child: const Icon(
                     Icons.arrow_drop_down,
-                    color: ColorDB.soft,
+                    color: PenkielColors.mask,
                     size: 26,
                   ),
                 )
               ],
             ),
+          ),
+        ],
+      ),
+    );
+  }
+}
+
+class TopNavMisc extends StatelessWidget {
+  const TopNavMisc({
+    super.key,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return Expanded(
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.end,
+        children: [
+          IconButton(
+            iconSize: 28,
+            color: PenkielColors.mask,
+            icon: const Icon(Icons.notifications),
+            onPressed: () {
+              print('Notifications button tapped');
+            },
+          ),
+          IconButton(
+            iconSize: 28,
+            color: PenkielColors.mask,
+            icon: const Icon(Icons.settings),
+            onPressed: () {
+              print('Settings button tapped');
+            },
+          ),
+          const VerticalDivider(
+            color: PenkielColors.dividerColor,
+            indent: 16,
+            endIndent: 16,
+            thickness: 1,
+            width: 12,
+          ),
+          IconButton(
+            iconSize: 44,
+            color: PenkielColors.mask,
+            icon: const Icon(Icons.account_circle),
+            onPressed: () {
+              print('Account button tapped');
+            },
           ),
         ],
       ),

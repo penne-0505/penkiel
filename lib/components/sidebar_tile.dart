@@ -22,7 +22,7 @@ class _SideBarTileState extends State<SideBarTile> {
     return TextButton(
       onPressed: _onTap,
       style: ButtonStyle(
-        overlayColor: MaterialStateProperty.all<Color>(ColorDB.vPHover),
+        backgroundColor: MaterialStateProperty.all<Color>(PenkielColors.transparent),
         shape: MaterialStateProperty.all<RoundedRectangleBorder>(
           RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(12),
@@ -30,7 +30,7 @@ class _SideBarTileState extends State<SideBarTile> {
         ),
       ),
       child: SizedBox(
-        height: 46,
+        height: 24,
         child: Row(
           children: [
             Icon(
@@ -42,11 +42,9 @@ class _SideBarTileState extends State<SideBarTile> {
             Text(
               widget.title,
               style: const TextStyle(
-                color: ColorDB.soft,
                 fontSize: 13,
-                fontFamily: 'Inter',
-                fontWeight: FontWeight.w600,
-                letterSpacing: 0.6,
+                color: PenkielColors.mask, // textでもいいけど、maskのほうが見栄え良い気が
+                fontWeight: FontWeight.w500,
                 height: 0.8,
               ),
             ),
