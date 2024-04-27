@@ -4,8 +4,6 @@ import 'package:penkiel/components/sidebar.dart';
 import 'package:penkiel/components/topnav.dart';
 import 'package:penkiel/utils.dart';
 
-// **Typos, magic numbers, nonsensical processing logic, no comments or documentation Xd **
-
 void main() {
   runApp(const PenkielApp());
 }
@@ -20,23 +18,24 @@ class PenkielApp extends StatelessWidget {
       home: const MyHomePage(title: 'Penkiel'),
       scrollBehavior: CustomScrollBehavior(),
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: ColorDB.primary, background: ColorDB.bg),
-        scrollbarTheme: ScrollbarThemeData(
-          radius: const Radius.circular(10),
-          thickness: MaterialStateProperty.all(4),
-          thumbColor: MaterialStateProperty.all(ColorDB.pale),
-        ),
         fontFamilyFallback: const <String>['Inter', 'Roboto', 'Arial', 'sans-serif'],
         useMaterial3: true,
-      ),
+        dividerColor: PenkielColors.dividerColor,
+        colorScheme: ColorScheme.fromSeed(
+          seedColor: PenkielColors.primary,
+          primary: PenkielColors.primary,
+          secondary: PenkielColors.secondary,
+          background: PenkielColors.bg
+          ),
+      )
     );
   }
 }
 
 class MyHomePage extends StatefulWidget {
   const MyHomePage({
-    super.key,
-    required this.title
+    super.key, 
+    required this.title,
   });
 
   final String title;
@@ -46,14 +45,13 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: const TopNav(),
       body: LayoutBuilder(
         builder: (BuildContext context, BoxConstraints constraints) {
-          if ((640 < constraints.maxWidth)) {
+          if (constraints.maxWidth > 1535) {
             return const Row(
               children: <Widget>[
                 Expanded(
