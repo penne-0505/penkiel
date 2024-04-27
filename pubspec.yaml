@@ -23,3 +23,29 @@ dev_dependencies:
 flutter:
 
   uses-material-design: true
+
+  assets:
+    - assets/
+    - assets/images/
+    - assets/icons/
+    - assets/icons/vectors/
+    - assets/icons/raster/
+
+
+flutter_launcher_icons:
+  ios: true
+  android: true
+  image_path: "assets/icons/raster/icon.png"
+  adaptive_icon_background: "#272727"
+  adaptive_icon_foreground: "assets/icons/raster/icon.png"
+  android_adaptive_icon_background: "#272727"
+  android_adaptive_icon_foreground: "assets/icons/raster/icon.png"
+  windows:
+    image_path: "assets/icons/raster/icon.png"
+    icon_size: 256
+  macos:
+    image_path: "assets/icons/raster/icon.png"
+  web:
+    image_path: "assets/icons/raster/icon.png"
+  linux:
+    image_path: "assets/icons/raster/icon.png"
