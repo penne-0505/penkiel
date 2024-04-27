@@ -120,7 +120,16 @@ class _SideBarMiscState extends State<SideBarMisc> {
       margin: const EdgeInsets.only(bottom: 24, left: 24, right: 24),
       decoration: const BoxDecoration(
         color: ColorDB.veryPale,
-        // border: Border.fromBorderSide(BorderSide(color: ColorDB.pale, width: 1)),
+        borderRadius: BorderRadius.all(Radius.circular(18)),
+        boxShadow: <BoxShadow>[
+          // TODO: ここのデザイン要検討
+          BoxShadow(
+            color: ColorDB.black,
+            blurStyle: BlurStyle.normal,
+            blurRadius: 4,
+            offset: Offset(0, 4),
+          ),
+        ],
       ),
       padding: const EdgeInsets.all(24),
       child: const Column(
