@@ -16,8 +16,8 @@ class PenkielApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
-      home: const MyHomePage(title: 'Penkiel App'),
+      title: 'Penkiel',
+      home: const MyHomePage(title: 'Penkiel'),
       scrollBehavior: CustomScrollBehavior(),
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: ColorDB.primary, background: ColorDB.bg),
