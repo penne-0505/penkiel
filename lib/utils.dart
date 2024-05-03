@@ -16,8 +16,8 @@ class PenkielColors {
   ///<br /><h3>0xFFF2F2F2</h3><img src="https://colorhexa.com/f2f2f2.png" width="200px" height="80px" />
   static const Color v100 = Color(0xFFfdfdfd);
 
-  ///<br /><h3>0xFFf4f4f4</h3><img src="https://colorhexa.com/f4f4f4.png" width="200px" height="80px" />
-  static const Color v200 = Color(0xFFf4f4f4);
+  ///<br /><h3>0xFFf6f6f6</h3><img src="https://colorhexa.com/f6f6f6.png" width="200px" height="80px" />
+  static const Color v200 = Color(0xFFf6f6f6);
 
   ///<br /><h3>0xFFc0c0c0</h3><img src="https://colorhexa.com/c0c0c0.png" width="200px" height="80px" />
   static const Color v300 = Color(0xFFc0c0c0);
@@ -39,7 +39,7 @@ class PenkielColors {
 
   static const Color bg = v100;
   static const Color card = v200;
-  static const Color shadow = v700;
+  static const Color shadow = Color(0x3f2e2e2e); // 25% opacity of v800
   static const Color grouped = v200;
   static const Color headline = v800;
   static const Color sentence = v700;
@@ -82,4 +82,12 @@ class PenkielColors {
   static const Color success100 = Color(0x1A81C784);
   static const Color success500 = Color(0x9981C784);
   static const Color success700 = Color(0xCC81C784);
+}
+
+class PenkielValues {
+  static const Radius borderRadius = Radius.circular(16);
+  static const double borderWidth = 1;
+
+  static const double margin = 24;
+  static const double padding = 24;
 }

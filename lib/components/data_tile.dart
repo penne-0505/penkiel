@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 
 import 'package:penkiel/utils.dart';
 
@@ -23,8 +22,8 @@ class DataTile extends StatelessWidget {
     return TextButton(
       style: ButtonStyle(
         shape: MaterialStateProperty.all<RoundedRectangleBorder>(
-          RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(12),
+          const RoundedRectangleBorder(
+            borderRadius: BorderRadius.all(PenkielValues.borderRadius),
           ),
         ),
       ),

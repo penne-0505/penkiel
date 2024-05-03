@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:penkiel/utils.dart';
 
 
@@ -21,8 +22,13 @@ class _TopNavState extends State<TopNav> {
       margin: const EdgeInsets.only(top: 24, bottom: 12, left: 24, right: 24),
       padding: const EdgeInsets.symmetric(horizontal: 12),
       decoration: BoxDecoration(
-        color: PenkielColors.grouped,
-        borderRadius: BorderRadius.circular(18),
+        color: PenkielColors.bg,
+        borderRadius: const BorderRadius.all(PenkielValues.borderRadius),
+        border: Border.all(
+          color: PenkielColors.dividerColor,
+          strokeAlign: BorderSide.strokeAlignCenter,
+          width: 1,
+        ),
       ),
       child: const Stack(
         fit: StackFit.expand,
@@ -109,43 +115,41 @@ class TopNavMisc extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Expanded(
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.end,
-        children: [
-          IconButton(
-            iconSize: 28,
-            color: PenkielColors.mask,
-            icon: const Icon(Icons.notifications),
-            onPressed: () {
-              print('Notifications button tapped');
-            },
-          ),
-          IconButton(
-            iconSize: 28,
-            color: PenkielColors.mask,
-            icon: const Icon(Icons.settings),
-            onPressed: () {
-              print('Settings button tapped');
-            },
-          ),
-          const VerticalDivider(
-            color: PenkielColors.dividerColor,
-            indent: 16,
-            endIndent: 16,
-            thickness: 1,
-            width: 12,
-          ),
-          IconButton(
-            iconSize: 44,
-            color: PenkielColors.mask,
-            icon: const Icon(Icons.account_circle),
-            onPressed: () {
-              print('Account button tapped');
-            },
-          ),
-        ],
-      ),
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.end,
+      children: [
+        IconButton(
+          iconSize: 28,
+          color: PenkielColors.mask,
+          icon: const Icon(Icons.notifications),
+          onPressed: () {
+            print('Notifications button tapped');
+          },
+        ),
+        IconButton(
+          iconSize: 28,
+          color: PenkielColors.mask,
+          icon: const Icon(Icons.settings),
+          onPressed: () {
+            print('Settings button tapped');
+          },
+        ),
+        const VerticalDivider(
+          color: PenkielColors.dividerColor,
+          indent: 16,
+          endIndent: 16,
+          thickness: 1,
+          width: 12,
+        ),
+        IconButton(
+          iconSize: 44,
+          color: PenkielColors.mask,
+          icon: const Icon(Icons.account_circle),
+          onPressed: () {
+            print('Account button tapped');
+          },
+        ),
+      ],
     );
   }
 }
