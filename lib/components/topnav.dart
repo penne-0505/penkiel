@@ -35,11 +35,16 @@ class _TopNavState extends State<TopNav> {
   }
 }
 
-class VaultInfo extends StatelessWidget {
+class VaultInfo extends StatefulWidget {
   const VaultInfo({
     super.key,
   });
 
+  @override
+  State<VaultInfo> createState() => _VaultInfoState();
+}
+
+class _VaultInfoState extends State<VaultInfo> {
   onPressed() {
     print('Vault button tapped');
   }
