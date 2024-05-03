@@ -17,9 +17,14 @@ class _SideBarState extends State<SideBar> {
     return Container(
       height: MediaQuery.of(context).size.height - 64,
       margin: const EdgeInsets.only(top: 12, bottom: 24, left: 24, right: 24),
-      decoration: const BoxDecoration(
-        color: PenkielColors.grouped,
-        borderRadius: BorderRadius.all(Radius.circular(18)),
+      decoration:BoxDecoration(
+        color: PenkielColors.bg,
+        borderRadius: const BorderRadius.all(PenkielValues.borderRadius),
+        border: Border.all(
+          color: PenkielColors.dividerColor,
+          strokeAlign: BorderSide.strokeAlignCenter,
+          width: 1,
+        ),
       ),
       padding: const EdgeInsets.all(24),
       constraints: const BoxConstraints(minWidth: 278, maxWidth: 278),
