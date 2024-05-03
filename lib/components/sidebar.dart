@@ -36,51 +36,44 @@ class _SideBarState extends State<SideBar> {
             indent: 6,
             endIndent: 6,
           ),
-          const SizedBox(height: 24),
-          const ExpansionTile(
-            // TODO: ExpansionTileの扱い考える
-            initiallyExpanded: true,
-            title: Text(
-              'Categories',
-              style: TextStyle(
-                fontSize: 12,
-                color: PenkielColors.text,
-                fontWeight: FontWeight.w400,
-                letterSpacing: 0.6,
-                height: 0.8,
-              ),
+          const SizedBox(height: 12),
+          const Text(
+            'Categories',
+            style: TextStyle(
+              fontSize: 12,
+              color: PenkielColors.text,
+              fontWeight: FontWeight.w400,
+              letterSpacing: 0.6,
+              height: 0.8,
             ),
-            children: [
-              SideBarTile(title: 'Passwords', icon: Icon(Icons.key, size: 22, color: PenkielColors.mask)),
-              SideBarTile(title: 'Documents', icon: Icon(Icons.description, size: 22, color: PenkielColors.mask)),
-              SideBarTile(title: 'Images', icon: Icon(Icons.image, size: 22, color: PenkielColors.mask)),
-              SideBarTile(title: 'Videos', icon: Icon(Icons.video_collection, size: 22, color: PenkielColors.mask)),
-              SideBarTile(title: 'Others', icon: Icon(Icons.security, size: 22, color: PenkielColors.mask)),
-            ],
           ),
+          const SizedBox(height: 6),
+          const SideBarTile(title: 'Passwords', icon: Icon(Icons.key, size: 22, color: PenkielColors.mask)),
+          const SideBarTile(title: 'Documents', icon: Icon(Icons.description, size: 22, color: PenkielColors.mask)),
+          const SideBarTile(title: 'Images', icon: Icon(Icons.image, size: 22, color: PenkielColors.mask)),
+          const SideBarTile(title: 'Videos', icon: Icon(Icons.video_collection, size: 22, color: PenkielColors.mask)),
+          const SideBarTile(title: 'Others', icon: Icon(Icons.security, size: 22, color: PenkielColors.mask)),
           const SizedBox(height: 24),
-          ExpansionTile(
-            initiallyExpanded: true,
-            title: const Text(
-              'Tags',
-              style: TextStyle(
-                fontSize: 12,
-                color: PenkielColors.text,
-                fontWeight: FontWeight.w400,
-                letterSpacing: 0.6,
-                height: 0.8,
-              ),
+          const Text(
+            'Tags',
+            style: TextStyle(
+              fontSize: 12,
+              color: PenkielColors.text,
+              fontWeight: FontWeight.w400,
+              letterSpacing: 0.6,
+              height: 0.8,
             ),
-            children: List.generate(20, (index) {
-              return SideBarTile(
-                title: 'Tag ${index + 1}',
-                icon: const Icon(Icons.local_offer),
-              );
-            }),
           ),
-        ],
-      ),
-    );
+          const SizedBox(height: 12),
+          ...List<Widget>.generate(20, (index) {
+            return SideBarTile(
+              title: 'Tag ${index + 1}',
+              icon: const Icon(Icons.local_offer),
+            );
+          })
+        ]
+      )
+      );
   }
 }
 
