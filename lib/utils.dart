@@ -14,13 +14,13 @@ class CustomScrollBehavior extends MaterialScrollBehavior {
 class PenkielColors {
 
   ///<br /><h3>0xFFF2F2F2</h3><img src="https://colorhexa.com/f2f2f2.png" width="200px" height="80px" />
-  static const Color v100 = Color(0xFFf2f2f2);
+  static const Color v100 = Color(0xFFfdfdfd);
 
-  ///<br /><h3>0xFFE6E6E6</h3><img src="https://colorhexa.com/e6e6e6.png" width="200px" height="80px" />
-  static const Color v200 = Color(0xFFe6e6e6);
+  ///<br /><h3>0xFFf4f4f4</h3><img src="https://colorhexa.com/f4f4f4.png" width="200px" height="80px" />
+  static const Color v200 = Color(0xFFf4f4f4);
 
-  ///<br /><h3>0xFFB3B3B3</h3><img src="https://colorhexa.com/b3b3b3.png" width="200px" height="80px" />
-  static const Color v300 = Color(0xFFb3b3b3);
+  ///<br /><h3>0xFFc0c0c0</h3><img src="https://colorhexa.com/c0c0c0.png" width="200px" height="80px" />
+  static const Color v300 = Color(0xFFc0c0c0);
 
   ///<br /><h3>0xFF999999</h3><img src="https://colorhexa.com/999999.png" width="200px" height="80px" />
   static const Color v400 = Color(0xFF999999);
@@ -31,11 +31,11 @@ class PenkielColors {
   ///<br /><h3>0xFF666666</h3><img src="https://colorhexa.com/666666.png" width="200px" height="80px" />
   static const Color v600 = Color(0xFF666666);
 
-  ///<br /><h3>0xFF333333</h3><img src="https://colorhexa.com/333333.png" width="200px" height="80px" />
-  static const Color v700 = Color(0xFF333333);
+  ///<br /><h3>0xFF444444</h3><img src="https://colorhexa.com/444444.png" width="200px" height="80px" />
+  static const Color v700 = Color(0xFF444444);
 
-  ///<br /><h3>0xFF1A1A1A</h3><img src="https://colorhexa.com/1a1a1a.png" width="200px" height="80px" />
-  static const Color v800 = Color(0xFF1a1a1a);
+  ///<br /><h3>0xFF2e2e2e</h3><img src="https://colorhexa.com/2e2e2e.png" width="200px" height="80px" />
+  static const Color v800 = Color(0xFF2e2e2e);
 
   static const Color bg = v100;
   static const Color card = v200;
@@ -49,7 +49,7 @@ class PenkielColors {
   static const Color border = v300;
   static const Color dividerColor = v300;
   static const Color text = v700;
-  static const Color mask = v600;
+  static const Color mask = v500;
   static const Color highContrastText = v800;
 
   ///<h3>0x00ffffff</h3>
