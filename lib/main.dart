@@ -3,7 +3,9 @@ import 'package:penkiel/components/data_list.dart';
 
 import 'package:penkiel/components/sidebar.dart';
 import 'package:penkiel/components/topnav.dart';
+import 'package:penkiel/components/data_content.dart';
 import 'package:penkiel/utils.dart';
+
 
 void main() {
   runApp(const PenkielApp());
@@ -66,18 +68,12 @@ class _MyHomePageState extends State<MyHomePage> {
                 ),
                 const Expanded(
                   flex: 40,
-                  child: Center(
-                    child: Text(
-                      'Main Content',
-                    ),
-                  ),
+                  child: DataContent()
                 ),
               ],
             );
           } else {
-            return const Center(
-              child: Text('Main Content'),
-            );
+            return const DataContent();
           }
         },
       ),
