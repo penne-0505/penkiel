@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:penkiel/components/data_list.dart';
 
 import 'package:penkiel/components/sidebar.dart';
 import 'package:penkiel/components/topnav.dart';
@@ -20,6 +21,7 @@ class PenkielApp extends StatelessWidget {
       theme: ThemeData(
         fontFamilyFallback: const <String>['Inter', 'Roboto', 'Arial', 'sans-serif'],
         useMaterial3: true,
+        scrollbarTheme: const ScrollbarThemeData().copyWith(thickness: MaterialStateProperty.all<double>(4)),
         dividerColor: PenkielColors.dividerColor,
         colorScheme: ColorScheme.fromSeed(
           seedColor: PenkielColors.primary,
@@ -52,16 +54,22 @@ class _MyHomePageState extends State<MyHomePage> {
       body: LayoutBuilder(
         builder: (BuildContext context, BoxConstraints constraints) {
           if (constraints.maxWidth > 1535) {
-            return const Row(
+            return Row(
               children: <Widget>[
-                Expanded(
-                  flex: 7,
+                const Expanded(
+                  flex: 12,
                   child: SideBar(),
                 ),
                 Expanded(
-                  flex: 32,
+                  flex: 18,
+                  child: DataList(),
+                ),
+                const Expanded(
+                  flex: 40,
                   child: Center(
-                    child: Text('Main Content'),
+                    child: Text(
+                      'Main Content',
+                    ),
                   ),
                 ),
               ],
