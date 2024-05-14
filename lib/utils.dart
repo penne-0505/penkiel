@@ -13,11 +13,11 @@ class CustomScrollBehavior extends MaterialScrollBehavior {
 
 class PenkielColors {
 
-  ///<br /><h3>0xFFF2F2F2</h3><img src="https://colorhexa.com/f2f2f2.png" width="200px" height="80px" />
+  ///<br /><h3>0xFFffdfdfd</h3><img src="https://colorhexa.com/fdfdfd.png" width="200px" height="80px" />
   static const Color v100 = Color(0xFFfdfdfd);
 
-  ///<br /><h3>0xFFf6f6f6</h3><img src="https://colorhexa.com/f6f6f6.png" width="200px" height="80px" />
-  static const Color v200 = Color(0xFFf6f6f6);
+  ///<br /><h3>0xFFf1f1f1</h3><img src="https://colorhexa.com/f1f1f1.png" width="200px" height="80px" />
+  static const Color v200 = Color(0xFFf1f1f1);
 
   ///<br /><h3>0xFFc0c0c0</h3><img src="https://colorhexa.com/c0c0c0.png" width="200px" height="80px" />
   static const Color v300 = Color(0xFFc0c0c0);
