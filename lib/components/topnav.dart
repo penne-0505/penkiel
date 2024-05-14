@@ -3,6 +3,8 @@ import 'package:flutter/widgets.dart';
 import 'package:penkiel/utils.dart';
 
 
+// TODO: hoverした時に、アンダーバーが表示されるようにする
+
 class TopNav extends StatefulWidget implements PreferredSizeWidget{
   const TopNav({
     super.key
