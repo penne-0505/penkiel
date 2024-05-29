@@ -16,8 +16,8 @@ class PenkielColors {
   ///<br /><h3>0xFFffdfdfd</h3><img src="https://colorhexa.com/fdfdfd.png" width="200px" height="80px" />
   static const Color v100 = Color(0xFFfdfdfd);
 
-  ///<br /><h3>0xFFf1f1f1</h3><img src="https://colorhexa.com/f1f1f1.png" width="200px" height="80px" />
-  static const Color v200 = Color(0xFFf1f1f1);
+  ///<br /><h3>0xFFf4f4f4</h3><img src="https://colorhexa.com/f4f4f4.png" width="200px" height="80px" />
+  static const Color v200 = Color(0xFFf4f4f4);
 
   ///<br /><h3>0xFFc0c0c0</h3><img src="https://colorhexa.com/c0c0c0.png" width="200px" height="80px" />
   static const Color v300 = Color(0xFFc0c0c0);
