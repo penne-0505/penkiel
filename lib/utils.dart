@@ -52,6 +52,8 @@ class PenkielColors {
   static const Color mask = v500;
   static const Color highContrastText = v800;
 
+  static const Color blendedSecff = Color(0xFFFBFDFF);
+
   ///<h3>0x00ffffff</h3>
   static const Color transparent = Color(0x00ffffff);
 
@@ -90,4 +92,22 @@ class PenkielValues {
 
   static const double margin = 24;
   static const double padding = 24;
+
+}
+
+class PenkielShadow {
+  BoxShadow neumorphicBottom = BoxShadow(
+    color: const Color(0xffa3b1c6),
+    offset: const Offset(5, 5),
+    blurRadius: 10,
+    spreadRadius: 0,
+  );
+
+  
+  BoxShadow neumorphicTop = const BoxShadow(
+    color: Color(0xFFfafbff),
+    offset: Offset(-5, -5),
+    blurRadius: 10,
+    spreadRadius: 0,
+  );
 }
