@@ -1,8 +1,6 @@
 import 'package:dotted_border/dotted_border.dart';
-import 'package:flutter/cupertino.dart';
 
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:penkiel/utils.dart';
 
 class DataCard extends StatelessWidget {
@@ -24,15 +22,12 @@ class DataCard extends StatelessWidget {
       width: double.infinity,
       margin: const EdgeInsets.symmetric(vertical: 12, horizontal: 100),
       padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 12),
-      decoration: const BoxDecoration(
-        color: PenkielColors.bg,
-        borderRadius: BorderRadius.all(PenkielValues.borderRadius),
+      decoration: BoxDecoration(
+        color: PenkielColors.blendedSecff,
+        borderRadius: const BorderRadius.all(PenkielValues.borderRadius),
         boxShadow: [
-          BoxShadow(
-            color: PenkielColors.shadow,
-            blurRadius: 2,
-            offset: Offset(0.5, 2),
-          ),
+          PenkielShadow().neumorphicBottom,
+          PenkielShadow().neumorphicTop,
         ],
       ),
       child: Row(

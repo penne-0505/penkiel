@@ -38,15 +38,10 @@ class _SearchFieldState extends State<SearchField> {
       decoration: BoxDecoration(
         color: PenkielColors.bg,
         borderRadius: BorderRadius.circular(18),
-        boxShadow: _isFocused
-            ? [
-                const BoxShadow(
-                  color: PenkielColors.shadow,
-                  blurRadius: 2,
-                  offset: Offset(0.5, 2),
-                ),
-              ]
-            : null,
+        border: Border.all(
+          color: _isFocused ? PenkielColors.v400 : PenkielColors.dividerColor,
+          width: 1,
+        ),
       ),
       child: TextField(
         focusNode: _focusNode,

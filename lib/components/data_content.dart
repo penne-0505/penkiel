@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import 'package:penkiel/utils.dart';
 import 'data_card.dart';
+import 'neumorphic_test.dart';
 
 
 class DataContent extends StatelessWidget {
@@ -13,7 +14,7 @@ class DataContent extends StatelessWidget {
       margin: const EdgeInsets.only(top: 12, bottom: 24, right: 24),
       padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 24),
       decoration: BoxDecoration(
-        color: PenkielColors.bg,
+        color: Color(0xffe7eaf1),
         borderRadius: const BorderRadius.all(PenkielValues.borderRadius),
         border: Border.all(
           color: PenkielColors.dividerColor,
@@ -23,10 +24,12 @@ class DataContent extends StatelessWidget {
       ),
       child: const Center(
         child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            DataCard(),
-            DataCard(),
-            DataCard(),
+            // DataCard(),
+            // DataCard(),
+            // DataCard(),
+            DataCardNeumophic()
           ]
         ),
       ),
