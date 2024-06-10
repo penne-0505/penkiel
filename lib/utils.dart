@@ -37,21 +37,36 @@ class PenkielColors {
   ///<br /><h3>0xFF2e2e2e</h3><img src="https://colorhexa.com/2e2e2e.png" width="200px" height="80px" />
   static const Color v800 = Color(0xFF2e2e2e);
 
+  /// v100
   static const Color bg = v100;
+  /// v200
   static const Color card = v200;
+  /// v800 with 25% opacity
   static const Color shadow = Color(0x3f2e2e2e); // 25% opacity of v800
+  /// v200
   static const Color grouped = v200;
+  /// v800
   static const Color headline = v800;
+  /// v700
   static const Color sentence = v700;
+  /// v200
   static const Color disabledMask = v200;
+  /// v300
   static const Color disabledBorder = v300;
+  /// v400
   static const Color disabledText = v400;
+  /// v300
   static const Color border = v300;
+  /// v300
   static const Color dividerColor = v300;
+  /// v700
   static const Color text = v700;
+  /// v500
   static const Color mask = v500;
+  /// v800
   static const Color highContrastText = v800;
 
+  ///<br /><h3>0xFFFBFDFF</h3><img src="https://colorhexa.com/fbfdff.png" width="200px" height="80px" />
   static const Color blendedSecff = Color(0xFFFBFDFF);
 
   ///<h3>0x00ffffff</h3>
@@ -96,10 +111,10 @@ class PenkielValues {
 }
 
 class PenkielShadow {
-  BoxShadow neumorphicBottom = BoxShadow(
-    color: const Color(0xffa3b1c6),
-    offset: const Offset(5, 5),
-    blurRadius: 10,
+  BoxShadow neumorphicBottom = const BoxShadow(
+    color: Color(0xffa3b1c6),
+    offset: Offset(5, 5),
+    blurRadius: 8,
     spreadRadius: 0,
   );
 
@@ -107,7 +122,14 @@ class PenkielShadow {
   BoxShadow neumorphicTop = const BoxShadow(
     color: Color(0xFFfafbff),
     offset: Offset(-5, -5),
-    blurRadius: 10,
+    blurRadius: 8,
+    spreadRadius: 0,
+  );
+
+  BoxShadow general = const BoxShadow(
+    color: Color(0x3f000000),
+    offset: Offset(2, 3),
+    blurRadius: 8,
     spreadRadius: 0,
   );
 }
