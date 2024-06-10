@@ -16,7 +16,7 @@ class _SideBarState extends State<SideBar> {
   Widget build(BuildContext context) {
     return Container(
       height: MediaQuery.of(context).size.height - 64,
-      margin: const EdgeInsets.only(top: 12, bottom: 24, left: 24, right: 24),
+      margin: const EdgeInsets.only(bottom: 24, left: 24, right: 24),
       decoration:BoxDecoration(
         color: PenkielColors.bg,
         borderRadius: const BorderRadius.all(PenkielValues.borderRadius),
@@ -75,7 +75,8 @@ class _SideBarState extends State<SideBar> {
               title: 'Tag ${index + 1}',
               icon: const Icon(Icons.local_offer),
             );
-          })
+          }),
+          const SideBarTile(title: 'This is test for very long length letters. Am I drawed right? Excuse me!?', icon: Icon(Icons.local_offer)),
         ]
       )
       );

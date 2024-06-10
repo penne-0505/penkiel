@@ -20,7 +20,7 @@ class _TopNavState extends State<TopNav> {
   Widget build(BuildContext context) {
     return Container(
       height: widget.preferredSize.height,
-      margin: const EdgeInsets.only(top: 24, bottom: 12, left: 24, right: 24),
+      margin: const EdgeInsets.only(top: 24, bottom: 24, left: 24, right: 24),
       padding: const EdgeInsets.symmetric(horizontal: 12),
       decoration: BoxDecoration(
         color: PenkielColors.bg,
@@ -65,10 +65,10 @@ class _VaultInfoState extends State<VaultInfo> {
           FilledButton(
             onPressed: onPressed,
             style: ButtonStyle(
-              backgroundColor: MaterialStateProperty.all<Color>(PenkielColors.transparent),
-              surfaceTintColor: MaterialStateProperty.all<Color>(PenkielColors.transparent),
-              overlayColor: MaterialStateProperty.all<Color>(PenkielColors.transparent),
-              shadowColor: MaterialStateProperty.all<Color>(PenkielColors.transparent),
+              backgroundColor: WidgetStateProperty.all<Color>(PenkielColors.transparent),
+              surfaceTintColor: WidgetStateProperty.all<Color>(PenkielColors.transparent),
+              overlayColor: WidgetStateProperty.all<Color>(PenkielColors.transparent),
+              shadowColor: WidgetStateProperty.all<Color>(PenkielColors.transparent),
             ),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.center,
