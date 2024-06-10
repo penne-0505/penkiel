@@ -8,12 +8,12 @@ class DataCardNeumophic extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: 200,
-      height: 200,
-      margin: const EdgeInsets.only(bottom: 12),
+      width: 700,
+      height: 100,
+      margin: const EdgeInsets.only(top: 12, bottom: 20),
       padding: const EdgeInsets.symmetric(horizontal: 28, vertical: 36),
       decoration: BoxDecoration(
-        color: Color(0xffe7eaf1),
+        color: const Color(0xffEBEEF4),
         borderRadius: const BorderRadius.all(Radius.circular(32)),
         boxShadow: [
           PenkielShadow().neumorphicBottom,
