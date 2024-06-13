@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 
-import 'package:penkiel/components/data_list.dart';
-import 'package:penkiel/components/sidebar.dart';
-import 'package:penkiel/components/topnav.dart';
-import 'package:penkiel/components/data_content.dart';
+import 'package:penkiel/components/layout/data_list.dart';
+import 'package:penkiel/components/layout/sidebar.dart';
+import 'package:penkiel/components/layout/topnav.dart';
+import 'package:penkiel/components/layout/data_content.dart';
 import 'package:penkiel/utils.dart';
 
 

@@ -22,8 +22,8 @@ class _SideBarTileState extends State<SideBarTile> {
     return TextButton(
       onPressed: _onTap,
       style: ButtonStyle(
-        backgroundColor: MaterialStateProperty.all<Color>(PenkielColors.transparent),
-        shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+        backgroundColor: WidgetStateProperty.all<Color>(PenkielColors.transparent),
+        shape: WidgetStateProperty.all<RoundedRectangleBorder>(
           RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(12),
           ),
