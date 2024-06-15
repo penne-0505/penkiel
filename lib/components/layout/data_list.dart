@@ -46,7 +46,7 @@ class DataList extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       margin: const EdgeInsets.only(bottom: 24, right: 24),
-      padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 24),
+      padding: const EdgeInsets.only(top: 18, bottom: 24, right: 16 ,left: 16),
       decoration: BoxDecoration(
         color: PenkielColors.bg,
         borderRadius: const BorderRadius.all(PenkielValues.borderRadius),
