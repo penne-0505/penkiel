@@ -2,12 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:penkiel/utils.dart';
 
 
-// TODO: hoverした時に、アンダーバーが表示されるようにする
-
 class TopNav extends StatefulWidget implements PreferredSizeWidget{
-  const TopNav({
-    super.key
-  });
+  const TopNav({super.key});
 
   @override
   Size get preferredSize => const Size.fromHeight(130);
@@ -52,6 +48,7 @@ class VaultInfo extends StatefulWidget {
 }
 
 class _VaultInfoState extends State<VaultInfo> {
+  bool isHovered = false;
   onPressed() {
     print('Vault button tapped');
   }
@@ -70,37 +67,46 @@ class _VaultInfoState extends State<VaultInfo> {
               overlayColor: WidgetStateProperty.all<Color>(PenkielColors.transparent),
               shadowColor: WidgetStateProperty.all<Color>(PenkielColors.transparent),
             ),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              mainAxisSize: MainAxisSize.min,
-              children: [
-                Container(
-                  margin: const EdgeInsets.only(right: 8),
-                  child: const Icon(
-                    Icons.folder,
-                    color: PenkielColors.mask,
-                    size: 30,
-                  ),
+            child: MouseRegion(
+              onEnter: (_) => setState(() => isHovered = true),
+              onExit: (_) => setState(() => isHovered = false),
+              child: Container(
+                decoration: BoxDecoration(
+                  border: Border(bottom: BorderSide(color: isHovered ? PenkielColors.dividerColor : PenkielColors.transparent, width: 1)),
                 ),
-                const Text(
-                  'Vault 1',
-                  style: TextStyle(
-                    fontSize: 18,
-                    color: PenkielColors.text,
-                    fontWeight: FontWeight.w600,
-                    letterSpacing: 0.6,
-                    height: 0.8,
-                  ),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  mainAxisSize: MainAxisSize.min,
+                  children: [
+                    Container(
+                      margin: const EdgeInsets.only(right: 8),
+                      child: const Icon(
+                        Icons.folder,
+                        color: PenkielColors.mask,
+                        size: 30,
+                      ),
+                    ),
+                    const Text(
+                      'Vault 1',
+                      style: TextStyle(
+                        fontSize: 18,
+                        color: PenkielColors.text,
+                        fontWeight: FontWeight.w600,
+                        letterSpacing: 0.6,
+                        height: 0.8,
+                      ),
+                    ),
+                    Container(
+                      margin: const EdgeInsets.only(left: 2),
+                      child: const Icon(
+                        Icons.arrow_drop_down,
+                        color: PenkielColors.mask,
+                        size: 26,
+                      ),
+                    )
+                  ],
                 ),
-                Container(
-                  margin: const EdgeInsets.only(left: 2),
-                  child: const Icon(
-                    Icons.arrow_drop_down,
-                    color: PenkielColors.mask,
-                    size: 26,
-                  ),
-                )
-              ],
+              ),
             ),
           ),
         ],
