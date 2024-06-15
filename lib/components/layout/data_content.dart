@@ -13,7 +13,7 @@ class DataContent extends StatelessWidget {
     return Container(
       height: double.infinity,
       margin: const EdgeInsets.only(bottom: 24, right: 24),
-      padding: const EdgeInsets.only(left: 24, right: 24, bottom: 24),
+      padding: const EdgeInsets.only(bottom: 24),
       decoration: BoxDecoration(
         color: PenkielColors.bg,
         borderRadius: const BorderRadius.all(PenkielValues.borderRadius),
@@ -29,11 +29,15 @@ class DataContent extends StatelessWidget {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
+                const Padding(
+                  padding: EdgeInsets.only(top: 18, bottom: 24),
+                  child: DataContentTitle(),
+                ), // 将来的にはStackで重ねる(現在はデザイン面において課題が残るためcolumnで配置)
                 ... List.generate(20, (index) => const DataCard()),
               ],
             ),
           ),
-          const DataContentTitle(),
+          
         ],
       ),
     );
@@ -46,32 +50,21 @@ class DataContentTitle extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 50,
       color: PenkielColors.bg,
       child: Row(
         children: [
-          Expanded(flex: 1, child: Container()), // Spacer
+          Expanded(flex: 5, child: Container()), // Spacer
           Expanded(
-            flex: 3,
+            flex: 12,
             child: Container(
               decoration: const BoxDecoration(
                 color: PenkielColors.bg,
-                boxShadow: [
-                  BoxShadow(
-                    color: PenkielColors.shadow,
-                    offset: Offset(0, 2),
-                    blurRadius: 2,
-                    spreadRadius: 0,
-                  ),
-                ],
               ),
               child: Row(
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
                   Image.asset(
                     'assets/icons/raster/icon.png',
-                    width: 48,
-                    height: 48,
                     fit: BoxFit.contain
                   ),
                   const SizedBox(width: 24),
@@ -79,7 +72,7 @@ class DataContentTitle extends StatelessWidget {
                     'Data',
                     style: TextStyle(
                       color: PenkielColors.v600,
-                      fontSize: 24,
+                      fontSize: 28,
                       fontWeight: FontWeight.w700,
                       fontFamily: 'Campton',
                       letterSpacing: 0.05,
@@ -89,7 +82,7 @@ class DataContentTitle extends StatelessWidget {
               ),
             ),
           ),
-          Expanded(flex: 1, child: Container()), // Spacer
+          Expanded(flex: 5, child: Container()), // Spacer
         ],
       ),
     );
