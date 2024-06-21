@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
 import 'package:penkiel/utils.dart';
+import 'package:penkiel/components/click_tooltip.dart';
 import 'package:penkiel/components/data_card.dart';
 
 
@@ -24,6 +25,7 @@ class DataContent extends StatelessWidget {
         ),
       ),
       child: Stack(
+        clipBehavior: Clip.none,
         children: [
           SingleChildScrollView(
             child: Column(
@@ -37,7 +39,6 @@ class DataContent extends StatelessWidget {
               ],
             ),
           ),
-          
         ],
       ),
     );
@@ -50,13 +51,15 @@ class DataContentTitle extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      clipBehavior: Clip.none,
       color: PenkielColors.bg,
       child: Row(
         children: [
-          Expanded(flex: 5, child: Container()), // Spacer
+          Expanded(flex: 5, child: Container(clipBehavior: Clip.none)), // Spacer
           Expanded(
             flex: 12,
             child: Container(
+              clipBehavior: Clip.none,
               decoration: const BoxDecoration(
                 color: PenkielColors.bg,
               ),
@@ -82,7 +85,7 @@ class DataContentTitle extends StatelessWidget {
               ),
             ),
           ),
-          Expanded(flex: 5, child: Container()), // Spacer
+          Expanded(flex: 5, child: Container(clipBehavior: Clip.none)), // Spacer
         ],
       ),
     );
