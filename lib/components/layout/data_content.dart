@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
 import 'package:penkiel/utils.dart';
-import 'package:penkiel/components/click_tooltip.dart';
 import 'package:penkiel/components/data_card.dart';
 
 
