@@ -35,7 +35,7 @@ class _SearchFieldState extends State<SearchField> {
             ),
           ),
           prefixIcon: const Padding(
-            padding: EdgeInsets.only(left: 12),
+            padding: EdgeInsets.only(left: 12, right: 8),
             child: Icon(Icons.search),
           ),
         ),
