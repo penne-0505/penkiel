@@ -26,7 +26,7 @@ class PenkielApp extends StatelessWidget {
           seedColor: PenkielColors.primary,
           primary: PenkielColors.primary,
           secondary: PenkielColors.secondary,
-          surface: PenkielColors.bg,
+          background: PenkielColors.bg,
           ),
       )
     );
