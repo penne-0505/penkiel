@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'package:penkiel/pages/main_content.dart';
-import 'package:penkiel/utils.dart';
+import 'package:penkiel/components/utils/utils.dart';
 
 
 void main() {
@@ -26,7 +26,7 @@ class PenkielApp extends StatelessWidget {
           seedColor: PenkielColors.primary,
           primary: PenkielColors.primary,
           secondary: PenkielColors.secondary,
-          background: PenkielColors.bg,
+          surface: PenkielColors.bg,
           ),
       )
     );
