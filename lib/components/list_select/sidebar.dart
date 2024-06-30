@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:penkiel/components/sidebar_tile.dart';
-import 'package:penkiel/utils.dart';
+import 'package:penkiel/components/list_select/sidebar_tile.dart';
+import 'package:penkiel/components/utils/utils.dart';
 
 class SideBar extends StatefulWidget {
   const SideBar({super.key});

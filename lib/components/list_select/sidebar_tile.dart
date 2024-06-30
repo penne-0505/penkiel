@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'package:penkiel/utils.dart';
+import 'package:penkiel/components/utils/utils.dart';
 
 class SideBarTile extends StatefulWidget {
   const SideBarTile({super.key, required this.title, required this.icon});

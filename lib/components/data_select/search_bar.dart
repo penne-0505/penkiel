@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:penkiel/utils.dart';
+import 'package:penkiel/components/utils/utils.dart';
 
 class SearchField extends StatefulWidget {
   const SearchField({super.key});

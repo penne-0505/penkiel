@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'package:penkiel/utils.dart';
+import 'package:penkiel/components/utils/utils.dart';
 
 class DataCardNeumophic extends StatelessWidget {
   const DataCardNeumophic({super.key});
