@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
-import 'package:penkiel/components/utils/utils.dart';
-import 'package:penkiel/components/data_view/data_card.dart';
+import 'package:penkiel/utils/utils.dart';
+import 'package:penkiel/widgets/specific/data_card.dart';
 
 
 class DataContent extends StatelessWidget {

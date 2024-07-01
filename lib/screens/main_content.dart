@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 
-import 'package:penkiel/components/data_view/data_content.dart';
-import 'package:penkiel/components/data_select/data_list.dart';
-import 'package:penkiel/components/list_select/sidebar.dart';
-import 'package:penkiel/components/top_navigation/topnav.dart';
+import 'package:penkiel/widgets/specific/data_content.dart';
+import 'package:penkiel/widgets/specific/data_list.dart';
+import 'package:penkiel/widgets/specific/sidebar.dart';
+import 'package:penkiel/widgets/specific/topnav.dart';
 
 class MainContentPage extends StatefulWidget {
   const MainContentPage({

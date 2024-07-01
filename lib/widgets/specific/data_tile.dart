@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'package:penkiel/components/utils/utils.dart';
+import 'package:penkiel/utils/utils.dart';
 
 
 class DataTile extends StatelessWidget {

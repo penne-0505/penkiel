@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
-import 'package:penkiel/components/data_select/data_tile.dart';
-import 'package:penkiel/components/data_select/search_bar.dart';
-import 'package:penkiel/components/utils/utils.dart';
+import 'package:penkiel/widgets/specific/data_tile.dart';
+import 'package:penkiel/widgets/common/search_bar.dart';
+import 'package:penkiel/utils/utils.dart';
 
 class DataList extends StatelessWidget {
   DataList({super.key});

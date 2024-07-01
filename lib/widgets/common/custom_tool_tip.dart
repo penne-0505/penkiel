@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:penkiel/components/painter/triangle_painter.dart';
-import 'package:penkiel/components/utils/utils.dart';
+import 'package:penkiel/utils/painter/triangle_painter.dart';
+import 'package:penkiel/utils/utils.dart';
 
 class CustomToolTip extends StatelessWidget {
   final String message;
