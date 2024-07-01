@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'package:penkiel/screens/main_content.dart';
+import 'package:penkiel/screens/content_screen.dart';
 import 'package:penkiel/utils/utils.dart';
 
 
