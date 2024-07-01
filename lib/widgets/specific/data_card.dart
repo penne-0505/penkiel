@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
 import 'package:penkiel/utils/utils.dart';
-import 'package:penkiel/utils/painter/triangle_painter.dart';
 
 import '../common/custom_tool_tip.dart';
+
 
 class DataCard extends StatefulWidget {
   const DataCard({super.key});
